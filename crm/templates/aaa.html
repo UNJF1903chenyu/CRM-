@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1335651_k8bmpeoz02i.css">
+<link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow-sm text-center " style="background-color: #563d7c">
+  <a class=" navbar-brand alert-dark col-sm-3 col-md-2 mr-0" href="#">大昌集团</a>
+  <div style="display: flex">
+  <a href="./bbb.html" style=" text-decoration:none;">
+   <div  class="haha" style="width:200px;height: 50px; line-height: 50px"><i class="iconfont icon-diannao-copy"><span style="margin-left: 20px;font-size: 16px">办公</span></i></div>
+       </a>
+   <a href="./aaa.html" style=" text-decoration:none;">
+  <div class="haha" style="width:200px;height: 50px;margin-right: 20px;line-height: 50px;color: white"><i class="iconfont icon-ren"><span  style="margin-left: 20px;font-size: 16px">客户管理</span></i></div>
+        </a>
+      <a href="#" style=" text-decoration:none;">
+          <div class="haha"  style="width:200px;height: 50px;margin-right: 20px;line-height: 50px; "> <i class="iconfont icon-zhinengfenxi"><span  style="margin-left: 20px;font-size: 16px">智能分析</span></i></div>
+      </a>
+         <div style="width:200px;height: 50px; "></div>
+     </div>
+    <div class="tubiao  " style="display: flex">
+    <div style="width: 70px">
+     <i class="iconfont icon-lingdang" ></i></div>
+     <div style="width: 80px">
+     <i class="iconfont icon-xiaoxi" ></i></div>
+     <div style="width: 80px">
+     <i class="iconfont icon-iconset0208" ></i></div>
+     </div>
+
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link text-uppercase " href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar shadow">
+      <div class="sidebar-sticky" style="line-height: 20px;">
+        <ul class="nav flex-column  ">
+         <li class="nav-item">
+            <a class="nav-link xuanxiang" href="#">
+             <i class="iconfont icon-daibanshixiang"> <span class="h5 "style="margin-left: 10px">待办事项</span></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link xuanxiang" href="#">
+                <i class="iconfont icon-xiansuojilu-copy"><span class="h5"style="margin-left: 15px">线索</span></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link xuanxiang" href="#">
+           <i class="iconfont icon-hailiangxiansuo"><span class="h5 " style="margin-left: 15px">线索池</span></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link xuanxiang" href="#">
+            <i class="iconfont icon-kehu"><span class="h5"style="margin-left: 15px">客户</span></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link xuanxiang" href="#">
+            <i class="iconfont icon-kehuqunzu"  > <span class="h5" style="margin-left: 10px">客户池</span></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      </div>
+        <!--  待办事项 -->
+        <div class="navbar neirong">
+          <div class=" border  shadow-sm" >
+
+              <nav class="navbar navbar-light bg-light justify-content-between shadow-sm">
+                  <div class="bg-light"style="display: flex; ">
+                      <div style="background-color: #007bff;width: 10px;height: 20px;margin-top: 5px"></div>
+                      <span class="text-primary h4"style="margin-left: 10px">待办事项</span></div>
+              </nav>
+              <div style="display: flex;">
+              <!-- Nav pills -->
+              <ul class="nav nav-pills flex-column bg-light shadow-sm"style="width:14%;height: 590px" role="tablist">
+                  <li class="nav-item">
+                      <h5 class="nav-link active " data-toggle="pill" href="#home">今日需联系的客户</h5>
+                  </li>
+                  <li class="nav-item">
+                      <h5 class="nav-link" data-toggle="pill" href="#menu1">分配给我的线索</h5>
+                  </li>
+                  <li class="nav-item">
+                      <h5 class="nav-link" data-toggle="pill" href="#menu2">分配给我的客户</h5>
+                  </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div  class="tab-content float-left " style="width: 85% ;height:90%">
+                  <div id="home" class="tab-pane container active " ><br>
+                      <h3>今日需联系的客户</h3>
+                      <div class="dropdown float-left" style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              今日需要联系的
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <div class="dropdown float-left "style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              我的任务
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <table class="table table table-sm table-hover border shadow-sm">
+                          <thead class="thead-light">
+                          <tr>
+                              <th>成交状态</th>
+                              <th>客户名称</th>
+                              <th>手机</th>
+                              <th>客户来源</th>
+                              <th>备注</th>
+                              <th>更新时间</th>
+                              <th>网址</th>
+                              <th>创建时间</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+
+                              <td>1,001</td>
+                              <td>Lorem</td>
+                              <td>ipsum</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+                              <td>sit</td>
+                              <td>1,001</td>
+                          </tr>
+
+                          </tbody>
+                      </table>
+
+                  </div>
+                  <div id="menu1" class="container tab-pane " ><br>
+                      <h3>分配给我的线索</h3>
+                      <div class="dropdown float-left" style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              今日需要联系的
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <div class="dropdown float-left "style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              我的任务
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <table class="table table table-sm table-hover border shadow-sm">
+                          <thead class="thead-light">
+                          <tr>
+
+                              <th>线索来源</th>
+                              <th>备注</th>
+                              <th>创建时间</th>
+                              <th>下次联系时间</th>
+                              <th>地址</th>
+                              <th>手机</th>
+                              <th>客户行业</th>
+                              <th>创建人</th>
+                              <th>电话</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>1,001</td>
+                              <td>1,001</td>
+                              <td>Lorem</td>
+                              <td>ipsum</td>
+                              <td>dolor</td>
+                              <td>sit</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+                          </tr>
+
+                          </tbody>
+                      </table>
+                  </div>
+                  <div id="menu2" class="container tab-pane " ><br>
+                      <h3>分配给我的客户</h3>
+                      <div class="dropdown float-left" style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              待跟进
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <div class="dropdown float-left "style="margin: 1%">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                              我的任务
+                          </button>
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                          </div>
+                      </div>
+                      <table class="table table table-sm table-hover border shadow-sm">
+                          <thead class="thead-light">
+                          <tr>
+
+                              <th>成交状态</th>
+                              <th>客户名称</th>
+                              <th>手机</th>
+                              <th>客户来源</th>
+                              <th>备注</th>
+                              <th>更新时间</th>
+                              <th>网址</th>
+                              <th>创建时间</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+
+                              <td>1,001</td>
+                              <td>Lorem</td>
+                              <td>ipsum</td>
+                              <td>dolor</td>
+                              <td>sit</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+                              <td>dolor</td>
+
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+        <!-- 线索 -->
+      <div class="navbar neirong">
+
+          <nav class="navbar navbar-light bg-light justify-content-between shadow-sm" style="display: flex">
+              <div class="bg-light">
+                  <div class="badge badge-secondary"><i class="iconfont icon-selected"></i> 已选中<span>1</span>项</div>
+                  <div class="badge badge-primary"><i class="iconfont icon-ziyuanfenpei"></i> 新建线索</div>
+                  <div class="badge badge-info"><i class="iconfont icon-export"></i> 批量导出</div>
+                  <div class="badge bg-warning "><i class="iconfont icon-fanhui"></i> 放入线索池</div>
+                  <div class="badge badge-danger"><i class="iconfont icon-shanchu"></i> 批量删除</div>
+              </div>
+              <form class="form-inline" >
+                  <input class="form-control mr-sm-2" type="search" placeholder="请输入线索名称" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+              </form>
+          </nav>
+          <table class=" shadow-sm table table table-sm table-hover border " style="margin-top: 20px">
+              <thead class="thead-light">
+              <tr>
+                  <th scope="col">联系人姓名</th>
+                  <th scope="col">公司</th>
+                  <th scope="col">尊称</th>
+                  <th scope="col">手机</th>
+                  <th scope="col">下次联系时间</th>
+                  <th scope="col">负责人</th>
+                  <th scope="col">创建人</th>
+                  <th scope="col">距离到期天数</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                  <td>@mdo</td>
+              </tr>
+              </tbody>
+          </table>
+
+      </div>
+        <!--线索池-->
+      <div class="navbar neirong">
+     <nav class="navbar navbar-light bg-light justify-content-between shadow-sm">
+       <div class="bg-light">
+           <div class="badge badge-secondary"><i class="iconfont icon-selected"></i> 已选中<span>1</span>项</div>
+            <div class="badge badge-success"> <i class="iconfont icon-lingqukehu"></i> 批量领取</div>
+           <div class="badge badge-primary"><i class="iconfont icon-ziyuanfenpei"></i> 批量分配</div>
+           <div class="badge badge-info"><i class="iconfont icon-export"></i> 批量导出</div>
+           <div class="badge badge-danger"><i class="iconfont icon-shanchu"></i> 批量删除</div>
+       </div>
+       <form class="form-inline">
+         <input class="form-control mr-sm-2" type="search" placeholder="请输入客户名称" aria-label="Search">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+       </form>
+     </nav>
+          <table class=" shadow-sm table table table-sm table-hover border " style="margin-top: 20px">
+              <thead class="thead-light">
+              <tr>
+                  <th scope="col">联系人姓名</th>
+                  <th scope="col">性别</th>
+                  <th scope="col">公司名</th>
+                  <th scope="col">手机</th>
+                  <th scope="col">Handle</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>@mdo</td>
+              </tr>
+              <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                  <td>@mdo</td>
+              </tr>
+
+              </tbody>
+          </table>
+</div>
+        <!--客户-->
+        <div class="navbar neirong">
+
+            <nav class="navbar navbar-light bg-light justify-content-between shadow-sm" style="display: flex">
+                <div class="bg-light">
+                    <div class="badge badge-secondary"><i class="iconfont icon-selected"></i> 已选中<span>1</span>项</div>
+                    <div class="badge badge-primary"><i class="iconfont icon-ziyuanfenpei"></i> 新建客户</div>
+                    <div class="badge badge-info"><i class="iconfont icon-export"></i> 批量导出</div>
+                    <div class="badge bg-warning "><i class="iconfont icon-fanhui"></i> 放入客户池</div>
+                    <div class="badge badge-danger"><i class="iconfont icon-shanchu"></i> 批量删除</div>
+                </div>
+                <form class="form-inline" >
+                    <input class="form-control mr-sm-2" type="search" placeholder="请输入线索名称" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                </form>
+            </nav>
+            <table class=" shadow-sm table table table-sm table-hover border " style="margin-top: 20px">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">联系人姓名</th>
+                    <th scope="col">公司</th>
+                    <th scope="col">尊称</th>
+                    <th scope="col">手机</th>
+                    <th scope="col">下次联系时间</th>
+                    <th scope="col">负责人</th>
+                    <th scope="col">创建人</th>
+                    <th scope="col">距离到期天数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>@mdo</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <!-- 客户池 -->
+        <div class="navbar neirong">
+
+            <nav class="navbar navbar-light bg-light justify-content-between shadow-sm" style="display: flex">
+                <div class="bg-light">
+                    <div class="badge badge-secondary"><i class="iconfont icon-selected"></i> 已选中<span>1</span>项</div>
+                    <div class="badge badge-success"> <i class="iconfont icon-lingqukehu"></i> 批量领取</div>
+                    <div class="badge badge-primary"><i class="iconfont icon-ziyuanfenpei"></i> 批量分配</div>
+                    <div class="badge badge-info"><i class="iconfont icon-export"></i> 批量导出</div>
+                    <div class="badge badge-danger"><i class="iconfont icon-shanchu"></i> 批量删除</div>
+                </div>
+                <form class="form-inline" >
+                    <input class="form-control mr-sm-2" type="search" placeholder="请输入线索名称" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                </form>
+            </nav>
+            <table class="table table table-sm table-hover border shadow-sm" style="margin-top: 20px">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">联系人姓名</th>
+                    <th scope="col">性别</th>
+                    <th scope="col">公司名</th>
+                    <th scope="col">手机</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>@mdo</td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-end  mb-2 ">
+                <button class="home">首页</button>
+                <button class="Previous">上一页</button>
+                <input class="instantly01" style="width:20px" value="1">
+                <button class="instantly">跳转</button>
+                <button class="under">下一页</button>
+                <button class="End">末页</button>
+            </div>
+        </div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../static/js/index.js"></script>
+<script src="../static/js/jquery-3.4.1.js"></script>
+</body>
+</html>
